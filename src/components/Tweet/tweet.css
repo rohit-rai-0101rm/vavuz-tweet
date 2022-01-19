@@ -1,0 +1,24 @@
+.tweetContainer {
+  display: flex;
+  flex-direction: row;
+  margin: 2vmax auto;
+  width: 80vw;
+  
+  justify-content: center;
+  max-width: 100%;
+}
+
+
+.tweet{
+    width: 14vmax;
+    background-color: #77b5fe;
+    display: flex;
+    text-align: center;
+    color: white;
+    flex-direction: column;
+    text-decoration: none;
+    border-radius: 10px;
+    margin: 2vmax;
+    transition: all 0.5s;
+    padding-bottom: 0.5vmax;
+}
