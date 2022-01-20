@@ -8,9 +8,9 @@ const Tweet = ({ tweet }) => {
       <div className="tweetCard">
         <div className="tweet">
           <h3>{tweet.message}</h3>
-          <Link to={`/mentions/${tweet.tags}`}> <p>{tweet.tags}</p></Link>
+          <Link style={{ textDecoration: 'none' }} to={`/mentions/${tweet.tags}`}> <p className="tweetText">{tweet.tags}</p></Link>
 
-          <Link to={`/hashtags/${tweet.hashTags}`}> <p>{tweet.hashTags}</p></Link>
+          <Link style={{ textDecoration: 'none' }} to={`/hashtags/${tweet.hashTags}`}> <p className="tweetText">{tweet.hashTags}</p></Link>
 
          
         </div>

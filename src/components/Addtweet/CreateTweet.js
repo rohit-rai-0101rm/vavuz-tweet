@@ -26,12 +26,18 @@ const CreateTweet = () => {
   const [tweet, setTweet] = useState({ message: "", tags: "", hashTags: "" });
 
   const submitTweet = () => {
+    console.log(tweet.hashTags);
+    if(tweet.hashTags==''||tweet.message==''||tweet.tags==''){
+      alert.error("please add your tweet")
+    }
+    else{
     dispatch(addTweet(tweet));
     setTweet({ message: '', tags: '', hashTags: '' });
 
 
     alert.success("one tweet added");
     history.push("/tweets")
+    }
 
   };
 
@@ -54,7 +60,7 @@ const CreateTweet = () => {
             value={tweet.tags}
             type="text"
             className="create__control2"
-            placeholder="select your  friends to tag"
+            placeholder="add your  friends to tag"
           />
 
           <input
@@ -62,7 +68,7 @@ const CreateTweet = () => {
             value={tweet.hashTags}
             type="text"
             className="create__control2"
-            placeholder="add some hashtags(seprated with commas)"
+            placeholder="add some hashtags"
           />
         </div>
       </div>
