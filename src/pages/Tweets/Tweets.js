@@ -9,8 +9,8 @@ const Tweets = () => {
   return (
     <div>
         {
-            tweets.map((tweet)=>(
-                <Tweet tweet={tweet}/>
+            tweets.map((tweet,i)=>(
+                <Tweet key={i} tweet={tweet}/>
 
             ))
         }
